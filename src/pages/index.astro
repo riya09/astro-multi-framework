@@ -1,0 +1,17 @@
+---
+import ReactCounter from '../components/react/Counter.jsx';
+import VueCounter from '../components/vue/Counter.vue';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro + React + Vue</title>
+  </head>
+  <body>
+    <h1>Welcome to Astro with React and Vue!</h1>
+    <ReactCounter client:idle />
+    <VueCounter client:idle />
+  </body>
+</html>
