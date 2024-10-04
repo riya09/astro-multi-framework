@@ -1,6 +1,6 @@
 ---
-import ReactCounter from '../components/react/Counter.jsx';
-import VueCounter from '../components/vue/Counter.vue';
+import Cart from "../components/vue/Cart.vue";
+import Products from "../components/react/Products.jsx"
 ---
 
 <html lang="en">
@@ -10,8 +10,8 @@ import VueCounter from '../components/vue/Counter.vue';
     <title>Astro + React + Vue</title>
   </head>
   <body>
-    <h1>Welcome to Astro with React and Vue!</h1>
-    <ReactCounter client:idle />
-    <VueCounter client:idle />
+    <Cart client:idle />
+    <Products client:idle />
+  
   </body>
 </html>
