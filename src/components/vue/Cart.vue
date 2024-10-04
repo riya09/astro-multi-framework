@@ -34,7 +34,9 @@
           <h5 class="font-manrope font-bold text-md leading-9 text-gray-900">
              {{ item.name }}
           </h5>
-          <button class="rounded-full group flex items-center justify-center focus-within:outline-red-500">
+          <button
+            @click="deleteItem(item)"
+            class="rounded-full group flex items-center justify-center focus-within:outline-red-500">
               <svg
                 width="34"
                 height="34"
@@ -60,7 +62,7 @@
 <script setup>
 import { useStore } from "@nanostores/vue";
 import { ref } from "vue";
-import { totalItem, items } from "../../store";
+import { totalItem, items, deleteItem } from "../../store";
 
 const total = useStore(totalItem);
 const cartItems = useStore(items);
