@@ -1,4 +1,8 @@
 {
+  "name": "multiple-astro-framework",
+  "description": "Demo of an astro project using multiple frameworks - react + vue",
+  "version": "1.0.0",
+  "keywords": ["astro", "react", "vue", "islands"],
   "dependencies": {
     "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.1",
