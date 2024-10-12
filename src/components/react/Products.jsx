@@ -6,14 +6,12 @@ export default function Products() {
     {
       id: 1,
       name: "Sneaker",
-      quantity: 2,
-      price: 100,
+      basePrice: 100,
     },
     {
       id: 2,
       name: "T-Shirt",
-      quantity: 1,
-      price: 12,
+      basePrice: 12,
     },
   ];
   const addToCart = (product) => {
