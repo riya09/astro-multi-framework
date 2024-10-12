@@ -1,0 +1,11 @@
+---
+import Cart from "./vue/Cart.vue";
+const { title } = Astro.props;
+---
+
+<div class="flex w-100 items-center bg-emerald-400 px-2">
+  <h1 class="flex-1 mb-0 text-center font-semibold font-mono text-xl text-stone-100">
+    {title}
+  </h1>
+  <Cart client:idle />
+</div>

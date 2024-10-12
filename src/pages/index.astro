@@ -1,17 +1,8 @@
 ---
-import Cart from "../components/vue/Cart.vue";
 import Products from "../components/react/Products.jsx"
+import Default from "../layouts/default.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro + React + Vue</title>
-  </head>
-  <body>
-    <Cart client:idle />
-    <Products client:idle />
-  
-  </body>
-</html>
+<Default>
+  <Products client:idle />
+</Default>

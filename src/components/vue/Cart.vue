@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="mr-4">
     <button
-      class="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full
-      hover:text-gray-400 focus:outline-none"
+      class="py-4 px-1 relative text-gray-800 rounded-md hover:text-gray-100 focus:outline-none flex"
       aria-label="Cart"
       @click="toggleList"
     >
+      <span>Vue Cart</span>
       <svg
         class="h-6 w-6"
         fill="none"
@@ -21,7 +21,7 @@
       </svg>
       <span v-if="total > 0" class="absolute inset-0 object-right-top -mr-6">
         <span
-          class="inline-flex items-center px-1.5 py-0.5 border-2 border-white rounded-full text-xs
+          class="inline-flex items-center px-1.5 py-0.5 border-2 border-red-500 rounded-full text-xs
           font-semibold leading-4 bg-red-500 text-white"
         >
           {{ total }}
@@ -30,7 +30,8 @@
     </button>
     <div
       v-if="showList"
-      class="border-2 border-gray-200 bg-red p-1 rounded-md w-72 min-h-48"
+      class="border-2 border-gray-200 bg-red p-2 rounded-md w-72 absolute right-4 top-12 bg-white z-10"
+      :class="!cartItems.length ? 'min-h-48' : null"
     >
       <h2 class="font-bold mb-2 text-lg">Cart</h2>
       <div
