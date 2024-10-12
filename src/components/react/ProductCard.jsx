@@ -3,28 +3,26 @@ export default function ({ product, addToCart }) {
     addToCart(product);
   }
   return (
-    <div className="relative m-10 w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-      <div
-        className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
+    <div className="relative w-full flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+      <div className="relative mx-3 mt-3 w-100 overflow-hidden rounded bg-slate-300 p-7 flex justify-center"
       >
         <img
-          className="object-cover"
-          src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          src={product.image}
           alt="product image"
+          width="150"
+          height="150"
         />
       </div>
       <div className="mt-4 px-5 pb-5">
-        <h5 className="text-xl tracking-tight text-slate-900">
-          {product.name}
-        </h5>
-        <div className="mt-2 mb-5 flex items-center justify-between">
-          <p>
-            <span className="text-3xl font-bold text-slate-900">${product.basePrice}</span>
-          </p>
+        <div className="flex justify-between items-center mb-4 gap-2">
+          <h5 className="text-xl tracking-tight text-slate-700">
+            {product.name}
+          </h5>
+          <p className="text-2xl font-bold text-slate-600">${product.basePrice}</p>
         </div>
         <button
           onClick={addProduct}
-          className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 outline-none"
+          className="flex items-center justify-center w-full rounded-md bg-slate-800 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-slate-600 outline-none"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
